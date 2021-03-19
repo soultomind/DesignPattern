@@ -1,6 +1,8 @@
 ﻿Strategy Pattern
 ================================================================
 
+<p align="center"><img src="Strategy.png" width="50%" height="30%" title="Strategy 클래스 다이어그램" alt="Strategy 클래스 다이어그램"></img></p>
+
 전략 패턴(Strategy Pattern)은 실행 중에 알고리즘을 선택할 수 있게 하는 행위 소프트웨어 디자인 패턴 다른 이름으로 정책 패턴(Policy Pattern) 이라고 함
 - 특정한 계열의 알고리즘들을 정의
 - 각 알고리즘을 캡슐화
