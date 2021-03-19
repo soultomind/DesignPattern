@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDirectoryStrategy.cs" />
-    <Compile Include="NowDateDirectory.cs" />
+    <Compile Include="NowDateDirectoryStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TempDirectoryContext.cs" />
@@ -51,10 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Strategy.png" />
+    <Content Include="Strategy.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

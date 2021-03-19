@@ -20,7 +20,7 @@ namespace Strategy
             tempDirectoryManager.DirectoryStrategy = directoryStrategy;
             tempDirectoryManager.CreateDirectory();
 
-            directoryStrategy = new NowDateDirectory();
+            directoryStrategy = new NowDateDirectoryStrategy();
             tempDirectoryManager.DirectoryStrategy = directoryStrategy;
             tempDirectoryManager.CreateDirectory();
         }

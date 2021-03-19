@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    public class NowDateDirectory : IDirectoryStrategy
+    public class NowDateDirectoryStrategy : IDirectoryStrategy
     {
         public string MakeDirectoryName()
         {
