@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    public interface IDirectory
+    public interface IDirectoryStrategy
     {
         string MakeDirectoryName();
     }

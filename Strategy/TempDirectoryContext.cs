@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    public class TempDirectoryManager
+    public class TempDirectoryContext
     {
-        public TempDirectoryManager(string rootDirectory)
+        public TempDirectoryContext(string rootDirectory)
         {
             this.RootDirectory = rootDirectory;
         }
         public string RootDirectory { get; internal set;
         }
-        public DefualtDirectory Directory { get; internal set; }
+        public IDirectoryStrategy DirectoryStrategy { get; internal set; }
 
         public void CreateDirectory()
         {
-            if (Directory != null)
+            if (DirectoryStrategy != null)
             {
-                string directoryName = Directory.MakeDirectoryName();
+                string directoryName = DirectoryStrategy.MakeDirectoryName();
                 string path = RootDirectory + Path.DirectorySeparatorChar + directoryName;
                 System.IO.Directory.CreateDirectory(path);
             }

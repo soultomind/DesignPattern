@@ -14,14 +14,14 @@ namespace Strategy
         {
             Console.WriteLine("DesignPattern Strategy Pattern");
             string rootDirectory = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
-            TempDirectoryManager tempDirectoryManager = new TempDirectoryManager(rootDirectory);
+            TempDirectoryContext tempDirectoryManager = new TempDirectoryContext(rootDirectory);
 
-            DefualtDirectory defaultDirectory = new UUIDDirectory();
-            tempDirectoryManager.Directory = defaultDirectory;
+            IDirectoryStrategy directoryStrategy = new UUIDDirectoryStrategy();
+            tempDirectoryManager.DirectoryStrategy = directoryStrategy;
             tempDirectoryManager.CreateDirectory();
 
-            defaultDirectory = new NowDateDirectory();
-            tempDirectoryManager.Directory = defaultDirectory;
+            directoryStrategy = new NowDateDirectory();
+            tempDirectoryManager.DirectoryStrategy = directoryStrategy;
             tempDirectoryManager.CreateDirectory();
         }
     }

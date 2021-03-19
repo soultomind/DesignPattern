@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    public class NowDateDirectory : IDirectoryStrategy
+    public class UUIDDirectoryStrategy : IDirectoryStrategy
     {
         public string MakeDirectoryName()
         {
-            string directoryName = DateTime.Now.ToString("yyyy.MM.dd");
-            Console.WriteLine("NowDateDirectory MakeDirectory={0}", directoryName);
+            string directoryName = Guid.NewGuid().ToString();
+            Console.WriteLine("UUIDDirectory MakeDirectory={0}", directoryName);
             return directoryName;
         }
     }
