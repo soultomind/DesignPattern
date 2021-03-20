@@ -65,17 +65,26 @@
  사용자의 요구사항에 따라 특정 RootDirectory(현재 샘플은 실행파일 위치 Debug\Release)에 특정한 패턴의 디렉토리를 생성하고 싶다고 요청이 왔습니다. 요구사항의 일부분 내용에는 프로그램이 실행중에 특정한 디렉토리를 만드는 
 방법도 변경이 되어야 한다고 명시되어 있습니다. 현재 시나리오에서의 알고리즘은 <strong>특정한 패턴의 디렉토리</strong>가 되겠습니다. 상황에 따라 프로그램의 동작중에 UUID 형태로 디렉토리를 생성하거나, 현재날짜로의 디렉토리 생성이
 가능해야 합니다.
- 
-</br></br>
+
+<p align="center"><img src="Strategy.gif" width="60%" height="70%" title="Strategy 클래스 다이어그램" alt="Strategy 클래스 다이어그램"></img></p>
+
+</br>
 특정한 패턴의 디렉토리 이름을 만드는 </br>
 <strong>Strategy=</strong><strong style='color:green'>IDirectoryStrategy</strong></br>
-해당 Strategy를 사용하는 </br>
-<strong>Context=</strong><strong style='color:green'>TempDirectoryContext</strong></br>
+제공하는 모든 알고리즘에 대한 공통의 연산들을 인터페이스로 정의합니다. Context 클래스는 Concreate 클래스에 정의한 인터페이스를 통해서 실제 알고리즘을 사용합니다.</br>
 </br>
+
 UUID 형태의 디렉토리 이름을 생성하는 </br>
 <strong>ConcreateStrategy1=</strong><strong style='color:green'>UUIDDirectoryStrategy</strong></br>
 현재 날짜(yyyy.MM.dd) 형태의 디렉토리 이름을 생성하는 </br>
 <strong>ConcreateStrategy2=</strong><strong style='color:green'>NowDateDirectoryStrategy</strong></br>
+Strategy 인터페이스를 실제 알고리즘으로 구현합니다. </br>
+
+해당 Strategy를 사용하는 </br>
+<strong>Context=</strong><strong style='color:green'>TempDirectoryContext</strong></br>
+ConcreateStrategy 객체를 통해 구성됩니다. 즉, Strategy 객체에 대한 참조자를 관리하고, 실제로는 Strategy 서브 클래스의 인스턴스를 갖고 있음으로써 구체화합니다.
+또한 Strategy 객체가 자료에 접근해가는 데 필요한 인터페이스를 정의합니다.
+</br>
 
 ### 샘플 출력 결과
 <pre><code>
