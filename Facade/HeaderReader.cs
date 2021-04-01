@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Facade
 {
-    class HeaderReader
+    internal class HeaderReader
     {
         public void Read(DocumentPage documentPage)
         {

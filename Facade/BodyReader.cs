@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Facade
 {
-    class BodyReader
+    internal class BodyReader
     {
         public void Read(DocumentPage documentPage)
         {
