@@ -10,6 +10,7 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
