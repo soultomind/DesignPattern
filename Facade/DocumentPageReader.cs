@@ -24,7 +24,7 @@ namespace Facade
             Console.WriteLine(documentPage.Number + ". 페이지를 읽습니다.");
             headerReader.Read(documentPage);
             bodyReader.Read(documentPage);
-            footerReader.Read(document, documentPage);
+            footerReader.Read(documentPage);
         }
     }
 }

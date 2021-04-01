@@ -8,7 +8,7 @@ namespace Facade
 {
     class FooterReader
     {
-        public void Read(Document document, DocumentPage documentPage)
+        public void Read(DocumentPage documentPage)
         {
             Console.WriteLine("서식의 푸터(꼬리말)을 읽습니다.");
             Console.WriteLine(documentPage.Footer);

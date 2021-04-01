@@ -46,10 +46,10 @@ namespace Facade
 
         internal void Write(StringBuilder builder)
         {
-            builder.Append(Header).AppendLine();
+            builder.Append("Header=" + Header).AppendLine();
             string text = String.Format(Body, Number);
-            builder.Append(text).AppendLine();
-            builder.Append(Footer).AppendLine();
+            builder.Append("Body=" + text).AppendLine();
+            builder.Append("Footer=" + Footer).AppendLine();
         }
     }
 }

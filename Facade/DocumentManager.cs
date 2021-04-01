@@ -54,8 +54,10 @@ namespace Facade
             builder.Append("Title=" + document.Title).AppendLine();
             for (int i = 0; i < document.Pages.Count; i++)
             {
+                builder.AppendFormat("{0}. Page======================", i + 1).AppendLine();
                 DocumentPage documentPage = document.Pages[i];
                 documentPage.Write(builder);
+                builder.AppendLine("============================");
             }
 
             System.IO.File.WriteAllText(path, builder.ToString());
