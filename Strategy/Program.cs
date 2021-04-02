@@ -16,7 +16,7 @@ namespace Strategy
             string rootDirectory = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
             TempDirectoryContext tempDirectoryManager = new TempDirectoryContext(rootDirectory);
 
-            IDirectoryStrategy directoryStrategy = new UUIDDirectoryStrategy();
+            IDirectoryStrategy directoryStrategy = new GuidDirectoryStrategy();
             tempDirectoryManager.DirectoryStrategy = directoryStrategy;
             tempDirectoryManager.CreateDirectory();
 

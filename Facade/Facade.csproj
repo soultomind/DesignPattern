@@ -42,19 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyReader.cs" />
+    <Compile Include="DocumentPageBodyReader.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="DocumentPage.cs" />
+    <Compile Include="DocumentPageBodyWriter.cs" />
+    <Compile Include="DocumentPageFooterWriter.cs" />
+    <Compile Include="DocumentPageHeaderWriter.cs" />
     <Compile Include="DocumentPageReader.cs" />
     <Compile Include="DocumentManager.cs" />
-    <Compile Include="FooterReader.cs" />
-    <Compile Include="HeaderReader.cs" />
+    <Compile Include="DocumentPageFooterReader.cs" />
+    <Compile Include="DocumentPageHeaderReader.cs" />
+    <Compile Include="DocumentPageWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Facade.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

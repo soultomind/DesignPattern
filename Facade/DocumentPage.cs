@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Facade
 {
@@ -42,14 +39,6 @@ namespace Facade
         {
             get { return number; }
             set { number = value; }
-        }
-
-        internal void Write(StringBuilder builder)
-        {
-            builder.Append("Header=" + Header).AppendLine();
-            string text = String.Format(Body, Number);
-            builder.Append("Body=" + text).AppendLine();
-            builder.Append("Footer=" + Footer).AppendLine();
         }
     }
 }

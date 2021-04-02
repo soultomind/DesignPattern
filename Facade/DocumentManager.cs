@@ -1,25 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Facade
 {
     public class DocumentManager
     {
         private DocumentPageReader documentPageReader;
-
+        private DocumentPageWriter documentPageWriter;
         public DocumentManager()
         {
             documentPageReader = new DocumentPageReader();
+            documentPageWriter = new DocumentPageWriter();
+        }
+
+        public DocumentPage GetPage(Document document, int index)
+        {
+            if (document.Pages.Count > index && index > -1)
+            {
+                return document.Pages[index];
+            }
+            return null;
         }
 
         public void SetPage(Document document, int index, string header, string body, string footer)
         {
-            if (document.Pages.Count > index && index > -1)
+            DocumentPage documentPage = GetPage(document, index);
+            if (documentPage != null)
             {
-                DocumentPage documentPage = document.Pages[index];
                 documentPage.Header = header;
                 documentPage.Body = body;
                 documentPage.Footer = footer;
@@ -50,13 +57,13 @@ namespace Facade
 
         public void Write(Document document, string path)
         {
-            StringBuilder builder = new StringBuilder(512);
+            StringBuilder builder = new StringBuilder(1024);
             builder.Append("Title=" + document.Title).AppendLine();
             for (int i = 0; i < document.Pages.Count; i++)
             {
                 builder.AppendFormat("{0}. Page======================", i + 1).AppendLine();
                 DocumentPage documentPage = document.Pages[i];
-                documentPage.Write(builder);
+                documentPageWriter.Write(documentPage, builder);
                 builder.AppendLine("============================");
             }
 

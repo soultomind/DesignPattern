@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    public class UUIDDirectoryStrategy : IDirectoryStrategy
+    public class GuidDirectoryStrategy : IDirectoryStrategy
     {
         public string MakeDirectoryName()
         {
             string directoryName = Guid.NewGuid().ToString();
-            Console.WriteLine("UUIDDirectory MakeDirectory={0}", directoryName);
+            Console.WriteLine("GuidDirectory MakeDirectory={0}", directoryName);
             return directoryName;
         }
     }

@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Facade
+{
+    internal class DocumentPageFooterWriter
+    {
+        internal void Write(DocumentPage documentPage, StringBuilder builder)
+        {
+            builder.Append("Footer=").Append(documentPage.Footer).AppendLine();
+        }
+    }
+}
