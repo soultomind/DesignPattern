@@ -105,8 +105,8 @@ ConcreateStrategy 객체를 통해 구성됩니다. 즉, Strategy 객체에 대�
 ### 샘플 출력 결과
 <pre><code>
 DesignPattern Strategy Pattern
-GuidDirectory MakeDirectory=43d83a19-70de-4964-94ff-27bfbe1340fc
-NowDateDirectory MakeDirectory=2021.03.19
+GuidDirectory MakeDirectory=b56990f4-e7fc-4468-b4cb-951983a217e3
+NowDateDirectory MakeDirectory=2021.04.23 16
 
 </code></pre>
 #### [Wikipedia 링크]
