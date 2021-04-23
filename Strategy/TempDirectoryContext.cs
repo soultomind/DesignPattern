@@ -13,8 +13,7 @@ namespace Strategy
         {
             this.RootDirectory = rootDirectory;
         }
-        public string RootDirectory { get; internal set;
-        }
+        public string RootDirectory { get; internal set; }
         public IDirectoryStrategy DirectoryStrategy { get; internal set; }
 
         public void CreateDirectory()
