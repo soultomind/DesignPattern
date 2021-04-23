@@ -10,7 +10,11 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("DesignPattern TemplateMethod Pattern");
+
             
         }
     }
+
+    
 }

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
+  <Class Name="Facade.Document">
+    <Position X="3" Y="1" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Members" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAEAgAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentManager" Collapsed="true">
+    <Position X="9" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAAAAAAAAAAgAAAQAAABAAAAAIkAAAA=</HashCode>
+      <FileName>DocumentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPage">
+    <Position X="3" Y="2.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Members" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAQAAAAEABAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DocumentPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageBodyReader">
+    <Position X="7.5" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DocumentPageBodyReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageBodyWriter">
+    <Position X="11.25" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>DocumentPageBodyWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageFooterReader">
+    <Position X="7.5" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DocumentPageFooterReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageFooterWriter">
+    <Position X="11.25" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>DocumentPageFooterWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageHeaderReader">
+    <Position X="7.5" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DocumentPageHeaderReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageHeaderWriter">
+    <Position X="11.25" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>DocumentPageHeaderWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageReader" Collapsed="true">
+    <Position X="7.5" Y="2" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>DocumentPageReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.DocumentPageWriter" Collapsed="true">
+    <Position X="11.25" Y="2" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAkAAAA=</HashCode>
+      <FileName>DocumentPageWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
