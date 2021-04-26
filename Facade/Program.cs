@@ -6,7 +6,7 @@ namespace Facade
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Facade Pattern");
+            Console.WriteLine("DesignPattern Facade Pattern");
 
             Document document = new Document("디자인 패턴");
             document.addPage("퍼사드 패턴", "{0}. 페이지 내용입니다.", "Facade DesignPattern");
