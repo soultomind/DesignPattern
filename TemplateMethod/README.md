@@ -112,7 +112,7 @@ DesignPattern TemplateMethod Pattern
 [ACorpDeviceManager]=장치에 연결 되어 있습니다.
 [ACorpDeviceManager]=연결에 성공하였습니다.Handle=1010
 [ACorpDeviceManager]=요청하신 내용을 처리합니다...
-ACropLib.dll Version=1.0.0.0
+[ACorpDeviceManager]=ACropLib.dll Version=1.0.0.0
 [ACorpDeviceManager]=전원 Off
 [BCorpDeviceManager]=전원 On
 [BCorpDeviceManager]=연결에 실패하였습니다.Handle=2020
