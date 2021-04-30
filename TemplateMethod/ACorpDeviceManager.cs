@@ -41,7 +41,7 @@ namespace TemplateMethod
 
         protected override void ShowFileVersion()
         {
-            Console.WriteLine("ACropLib.dll Version=1.0.0.0");
+            ShowDisplayMessage("ACropLib.dll Version=1.0.0.0");
         }
     }
 }

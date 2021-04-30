@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractDeviceManager.cs" />
     <Compile Include="ACorpDeviceManager.cs" />
     <Compile Include="BCorpDeviceManager.cs" />
-    <Compile Include="AbstractDeviceManager.cs" />
     <Compile Include="IDeviceCheckManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
