@@ -11,12 +11,21 @@ namespace Singleton
         {
             Console.WriteLine("DesignPattern Singleton Pattern");
 
-            LazySingleton o1 = LazySingleton.GetInstance();
-            LazySingleton o2 = LazySingleton.GetInstance();
-
-            if (object.ReferenceEquals(o1, o2))
+            Console.WriteLine("============== SingletonObj ==============");
+            SingletonObj so1 = SingletonObj.GetInstance();
+            SingletonObj so2 = SingletonObj.GetInstance();
+            if (object.ReferenceEquals(so1, so2))
             {
-                Console.WriteLine("LazySingleton object.ReferenceEquals o1 == o2 True!");
+                Console.WriteLine("SingletonObj object.ReferenceEquals lso1 == lso2 True!");
+            }
+
+            Console.WriteLine("============== LazySingletonObj ==============");
+            LazySingletonObj lso1 = LazySingletonObj.GetInstance();
+            LazySingletonObj lso2 = LazySingletonObj.GetInstance();
+
+            if (object.ReferenceEquals(lso1, lso2))
+            {
+                Console.WriteLine("LazySingleton object.ReferenceEquals lso1 == lso2 True!");
             }
         }
     }

@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Singleton
 {
-    class LazySingleton
+    class LazySingletonObj
     {
-        LazySingleton()
+        LazySingletonObj()
         {
-            Console.WriteLine("LazySingleton()");
+            Console.WriteLine("LazySingletonObj()");
         }
         private class Holder
         {
-            public readonly static LazySingleton Instance = new LazySingleton();
+            public readonly static LazySingletonObj Instance = new LazySingletonObj();
 
             static Holder()
             {
@@ -21,7 +21,7 @@ namespace Singleton
             }
         }
 
-        public static LazySingleton GetInstance()
+        public static LazySingletonObj GetInstance()
         {
             return Holder.Instance;
         }
