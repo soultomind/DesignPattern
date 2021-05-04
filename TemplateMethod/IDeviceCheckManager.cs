@@ -8,6 +8,6 @@ namespace TemplateMethod
 {
     interface IDeviceCheckManager
     {
-        bool IsConnected();
+        bool IsConnected { get; }
     }
 }

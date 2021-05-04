@@ -1,7 +1,7 @@
 ﻿TemplateMethod Pattern
 ================================================================
 
-<p align="center"><img src="TemplateMethod.gif" width="80%" height="70%" title="Strategy 클래스 다이어그램" alt="Strategy 클래스 다이어그램"></img></p>
+<p align="center"><img src="TemplateMethod.gif" width="80%" height="70%" title="TemplateMethod 클래스 다이어그램" alt="TemplateMethod 클래스 다이어그램"></img></p>
 
 템플릿 메소드 패턴(Template Method Pattern)은 소프트웨어 공학에서 동작 <strong>상의 알고리즘의 프로그램 뼈대를 정의하는 디자인 패턴</strong>이다. 알고리즘의 구조를 변경하지 않고 알고리즘의 특정 단계들을 다시 정의할 수 있게 해준다.
 
@@ -92,7 +92,7 @@ protected override void ShowFileVersion()
 내용을 전달하였습니다. 지훈과장은 A회사 B회사 장치 라이브러리 기능에 대해서는 비슷하여 장치에 연결하는 부분에 대해서만 잘 처리하면 될 거 말합니다.
 또 추후에 C회사, D회사 장치 라이브러리 연동이 필요 할수도 있으니 연결체크 기능을 제공하는 장치디바이스 클래스에 대해서는 연결체크기능을 지원한다고 속성을 정의하고 연결체크기능을 제공하는 인터페이스를 구현하라고 말합니다.
 
-여기서 <strong>연결하는 부분과 연결체크 기능을 제공할 떄와 제공을 하지 않을때 에 대한 처리</strong>를 템플릿 메서드로 처리합니다. 연결체크 기능에 대해서는 훅(Hook)연산을 호출하도록 정의합니다.
+여기서 <strong>장치에 연결하는 부분</strong>을 템플릿 메서드로 처리합니다. 내부적으로 연결체크 기능을 제공할 떄와 제공을 하지 않을때 에 대한 처리는 훅(Hook)연산을 정의하여 처리합니다.
 
 <strong>AbstractClass=</strong><strong style='color:green'>AbstractDeviceManager</strong></br>
 서브 클래스들이 재정의를 통해 구현해야 하는 알고리즘 처리 단계 내의 <strong>기본 연산</strong>을 정의합니다. 그리고 알고리즘의 뼈대를 정의하는 템플릿 메서드를 구현합니다. 템플릿 메서드는 AbstractClass에 정의된 연산 또는 다른
@@ -119,6 +119,7 @@ DesignPattern TemplateMethod Pattern
 [BCorpDeviceManager]=알수 없는 에러가 발생하였습니다.
 [BCorpDeviceManager]=전원 Off
 </code></pre>
+
 #### [Wikipedia 링크]
 #### https://ko.wikipedia.org/wiki/%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4
 

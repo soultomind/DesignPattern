@@ -25,7 +25,7 @@ namespace TemplateMethod
                 }
 
                 ShowDisplayMessage("장치 연결 체크를 지원하는 장치입니다.");
-                if ((this as IDeviceCheckManager).IsConnected())
+                if ((this as IDeviceCheckManager).IsConnected)
                 {
                     ShowDisplayMessage("장치에 연결 되어 있습니다.");
                     ConnectHandle(handle);

@@ -15,9 +15,9 @@ namespace TemplateMethod
                 return true;
             }
         }
-        public bool IsConnected()
+        public bool IsConnected
         {
-            return true;
+            get { return true; }
         }
 
         protected override void ConnectHandle(IntPtr handle)
