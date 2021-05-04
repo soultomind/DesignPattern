@@ -1,7 +1,7 @@
 ﻿Facade Pattern
 ================================================================
 
-<p align="center"><img src="Facade.gif" width="80%" height="70%" title="Strategy 클래스 다이어그램" alt="Strategy 클래스 다이어그램"></img></p>
+<p align="center"><img src="Facade.gif" width="80%" height="70%" title="Facade 클래스 다이어그램" alt="Facade 클래스 다이어그램"></img></p>
 
 퍼사드 패턴은(Facade Pattern)는 클래스 라이브러리 같은 어떤 소프트웨어의 다른 커다란 코드 부분에 대한 <strong>간략화된 인터페이스를 제공</strong>하는 객체이다.
 - 소프트웨어 라이브러리를 쉽게 사용할 수 있게 해줌
