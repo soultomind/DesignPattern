@@ -87,24 +87,28 @@ namespace Command
 
         public void Undo()
         {
-            // Remove
-            IDocumentControlCommand command = UnDoDocumentControls.Pop();
-            ReDoDocumentControls.Push(command);
+            if (UnDoDocumentControls.Count > 0)
+            {
+                IDocumentControlCommand command = UnDoDocumentControls.Pop();
+                ReDoDocumentControls.Push(command);
 
-            Console.WriteLine("Undo........ Press any key");
-            Console.ReadKey();
-            Redraw();
+                Console.WriteLine("Undo........ Press any key");
+                Console.ReadKey();
+                Redraw();
+            }
         }
 
         public void Redo()
         {
-            // Execute
-            IDocumentControlCommand command = ReDoDocumentControls.Pop();
-            UnDoDocumentControls.Push(command);
+            if (ReDoDocumentControls.Count > 0)
+            {
+                IDocumentControlCommand command = ReDoDocumentControls.Pop();
+                UnDoDocumentControls.Push(command);
 
-            Console.WriteLine("Redo........ Press any key");
-            Console.ReadKey();
-            Redraw();
+                Console.WriteLine("Redo........ Press any key");
+                Console.ReadKey();
+                Redraw();
+            }
         }
     }
 }

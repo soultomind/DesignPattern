@@ -6,6 +6,7 @@
 - Facade Pattern
 - Strategy
 - TemplateMethod
+- Command
 
 그 밖의 패턴
 - Builder
