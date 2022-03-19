@@ -16,15 +16,21 @@ namespace TemplateMethod
 
             deviceManager = new ACorpDeviceManager();
             deviceManager.On();
-            deviceManager.Connect((IntPtr)1010);
-            deviceManager.Process();
-            deviceManager.About();
+            if (deviceManager.Connect((IntPtr)1010))
+            {
+                deviceManager.Process();
+                deviceManager.About();
+            }
             deviceManager.Off();
 
             deviceManager = new BCorpDeviceManager();
             deviceManager.On();
-            deviceManager.Connect((IntPtr)2020);
-            deviceManager.Process();
+            if (deviceManager.Connect((IntPtr)2020))
+            {
+                deviceManager.Process();
+                deviceManager.About();
+            }
+            
             deviceManager.Off();
         }
     }

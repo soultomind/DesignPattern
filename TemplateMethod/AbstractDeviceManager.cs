@@ -10,13 +10,20 @@ namespace TemplateMethod
     {
         public bool IsOn { get; set; }
         public abstract bool IsSupportedConnectCheck { get; }
+
+        public abstract void Process();
         public void About()
         {
             // 부모 클래스가 정의한 행동
             ShowFileVersion();
         }
-        public void Connect(IntPtr handle)
+        public bool Connect(IntPtr handle)
         {
+            if (!IsOn)
+            {
+                throw new InvalidOperationException("잘못된 접근입니다. 전원이 꺼져있습니다.");
+            }
+
             if (IsSupportedConnectCheck)
             {
                 if (!(this is IDeviceCheckManager))
@@ -28,24 +35,18 @@ namespace TemplateMethod
                 if ((this as IDeviceCheckManager).IsConnected)
                 {
                     ShowDisplayMessage("장치에 연결 되어 있습니다.");
-                    ConnectHandle(handle);
+                    return ConnectHandle(handle);
                 }
                 else
                 {
                     ShowDisplayMessage("장치에 연결 되어 있지 않습니다.");
+                    return false;
                 }
             }
             else
             {
-                ConnectHandle(handle);
+                return ConnectHandle(handle);
             }
-        }
-        protected abstract void ConnectHandle(IntPtr handle);
-        public abstract void Process();
-
-        protected virtual void ShowFileVersion()
-        {
-
         }
 
         public void On()
@@ -65,6 +66,13 @@ namespace TemplateMethod
                 IsOn = false;
             }
         }
+
+        protected virtual void ShowFileVersion()
+        {
+
+        }
+
+        protected abstract bool ConnectHandle(IntPtr handle);
 
         protected virtual void ShowDisplayMessage(string text)
         {

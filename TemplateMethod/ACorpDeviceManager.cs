@@ -20,17 +20,18 @@ namespace TemplateMethod
             get { return true; }
         }
 
-        protected override void ConnectHandle(IntPtr handle)
-        {
-            string text = String.Format("연결에 성공하였습니다.Handle={0}", handle);
-            ShowDisplayMessage(text);
-        }
-
-
         public override void Process()
         {
             ShowDisplayMessage("요청하신 내용을 처리합니다...");
         }
+
+        protected override bool ConnectHandle(IntPtr handle)
+        {
+            string text = String.Format("연결에 성공하였습니다.Handle={0}", handle);
+            ShowDisplayMessage(text);
+            return true;
+        }
+
 
         protected override void ShowDisplayMessage(string text)
         {

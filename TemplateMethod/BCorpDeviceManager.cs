@@ -16,15 +16,16 @@ namespace TemplateMethod
             }
         }
 
-        protected override void ConnectHandle(IntPtr handle)
-        {
-            string text = String.Format("연결에 실패하였습니다.Handle={0}", handle);
-            ShowDisplayMessage(text);
-        }
-
         public override void Process()
         {
             ShowDisplayMessage("알수 없는 에러가 발생하였습니다.");
+        }
+
+        protected override bool ConnectHandle(IntPtr handle)
+        {
+            string text = String.Format("연결에 실패하였습니다.Handle={0}", handle);
+            ShowDisplayMessage(text);
+            return false;
         }
 
         protected override void ShowDisplayMessage(string text)
