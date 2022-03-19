@@ -6,11 +6,11 @@
 - Facade Pattern
 - Strategy
 - TemplateMethod
-- Command
 
 그 밖의 패턴
 - Builder
 - Singleton
+- Command
 
 패턴을 분류하는 기준은 두 가지입니다. 첫 번째 분류 기준은 목적(Purpose)인데요, 다시 말해 패턴이 무엇을 하는지 정의하는 것입니다.
 
