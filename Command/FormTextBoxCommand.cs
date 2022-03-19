@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    public class DocumentButtonCommand : DocumentControlCommand
+    class FormTextBoxCommand : FormControlCommand
     {
-        public DocumentButtonCommand(DocumentButton control) 
+        public FormTextBoxCommand(FormTextBox control) 
             : base(control)
         {
 
@@ -22,7 +22,7 @@ namespace Command
 
         public override void Draw()
         {
-            Console.WriteLine("버튼을 그립니다.=" + Control.ToString());
+            Console.WriteLine("텍스트박스를 그립니다.=" + Control.ToString());
         }
     }
 }

@@ -8,20 +8,20 @@ namespace Command
 {
     public class Designer
     {
-        public List<Document> NewDocuemnts { get; set; }
-        public Document CurrentSelectDocument { get; set; }
+        public List<Form> Forms { get; set; }
+        public Form CurrentSelectionForm { get; set; }
         public Designer()
         {
-            NewDocuemnts = new List<Document>();
+            Forms = new List<Form>();
         }
 
-        public Document NewDocument()
+        public Form NewForm()
         {
-            string name = String.Format("NewForm{0}", NewDocuemnts.Count + 1);
-            Document newDocument = new Document(name);
-            NewDocuemnts.Add(newDocument);
-            CurrentSelectDocument = newDocument;
-            return newDocument;
+            string name = String.Format("NewForm{0}", Forms.Count + 1);
+            Form newForm = new Form(name);
+            Forms.Add(newForm);
+            CurrentSelectionForm = newForm;
+            return newForm;
         }
     }
 }

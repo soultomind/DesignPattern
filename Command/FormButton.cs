@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class DocumentTextBox : DocumentControl
+    public class FormButton : FormControl
     {
-        public DocumentTextBox(string name, Point pt1, Point pt2)
+        public FormButton(string name, Point pt1, Point pt2)
             : base(name, pt1, pt2)
         {
 

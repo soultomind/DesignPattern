@@ -43,17 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DocumentButtonCommand.cs" />
-    <Compile Include="DocumentControlCommand.cs" />
+    <Compile Include="FormButtonCommand.cs" />
+    <Compile Include="FormControlCommand.cs" />
     <Compile Include="Designer.cs" />
-    <Compile Include="Document.cs" />
-    <Compile Include="DocumentButton.cs" />
-    <Compile Include="DocumentControl.cs" />
-    <Compile Include="DocumentManager.cs" />
-    <Compile Include="DocumentTextBox.cs" />
-    <Compile Include="DocumentTextBoxCommand.cs" />
-    <Compile Include="IDocumentControlCommand.cs" />
-    <Compile Include="IDocumentControl.cs" />
+    <Compile Include="Form.cs" />
+    <Compile Include="FormButton.cs" />
+    <Compile Include="FormControl.cs" />
+    <Compile Include="FormTextBox.cs" />
+    <Compile Include="FormTextBoxCommand.cs" />
+    <Compile Include="IFormControlCommand.cs" />
+    <Compile Include="IFormControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

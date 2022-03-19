@@ -14,28 +14,28 @@ namespace Command
             Console.WriteLine("DesignPattern Command Pattern");
 
             Designer designer = new Designer();
-            Document document = designer.NewDocument();
+            Form form = designer.NewForm();
 
             Console.WriteLine("현재 문서에");
-            DocumentButton buton = new DocumentButton(
+            FormButton buton = new FormButton(
                 "버튼1", new Point(10, 10), new Point(60, 30))
             {
                 Text = "클릭"
             };
-            document.AddControl(buton);
+            form.AddControl(buton);
 
-            DocumentTextBox textBox = new DocumentTextBox(
+            FormTextBox textBox = new FormTextBox(
                 "텍스트1", new Point(10, 10), new Point(60, 30))
             {
                 Text = ""
             };
-            document.AddControl(textBox);
+            form.AddControl(textBox);
 
-            document.Undo();
-            document.Undo();
+            form.Undo();
+            form.Undo();
 
-            document.Redo();
-            document.Redo();
+            form.Redo();
+            form.Redo();
         }
     }
 }

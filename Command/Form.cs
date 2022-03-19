@@ -8,27 +8,27 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    public class Document
+    public class Form
     {
         public string Name { get; set; }
         public Size Size { get; set; }
 
-        public Stack<IDocumentControlCommand> UnDoDocumentControls { get; set; } = new Stack<IDocumentControlCommand>();
-        public Stack<IDocumentControlCommand> ReDoDocumentControls { get; set; } = new Stack<IDocumentControlCommand>();
+        public Stack<IFormControlCommand> UnDoFormControls { get; set; } = new Stack<IFormControlCommand>();
+        public Stack<IFormControlCommand> ReDoFormControls { get; set; } = new Stack<IFormControlCommand>();
 
-        public Document()
+        public Form()
             : this("NewForm1")
         {
 
         }
 
-        public Document(string name)
+        public Form(string name)
             : this(name, new Size(2100, 2970))
         {
 
         }
 
-        public Document(string name, Size size)
+        public Form(string name, Size size)
         {
             Name = name;
             Size = size;
@@ -36,20 +36,20 @@ namespace Command
 
         public void Redraw()
         {
-            Console.WriteLine("현재 문서를 다시 그립니다.");
+            Console.WriteLine("현재 폼을 다시 그립니다.");
             Console.WriteLine("모든 컨트롤을 다시 그립니다.");
-            foreach (IDocumentControlCommand command in UnDoDocumentControls)
+            foreach (IFormControlCommand command in UnDoFormControls)
             {
                 command.Draw();
             }
         }
 
-        private IDocumentControlCommand CreateDocumentControlCommand(IDocumentControl control)
+        private IFormControlCommand CreateFormControlCommand(IFormControl control)
         {
             Assembly assembly = Assembly.GetEntryAssembly();
             foreach (var type in assembly.GetTypes())
             {
-                if (type.IsClass && type.GetInterfaces().Contains(typeof(IDocumentControlCommand)))
+                if (type.IsClass && type.GetInterfaces().Contains(typeof(IFormControlCommand)))
                 {
                     foreach (var constructor in type.GetConstructors())
                     {
@@ -60,7 +60,7 @@ namespace Command
                             {
                                 if (parameter.ParameterType.Equals(control.GetType()))
                                 {
-                                    return (IDocumentControlCommand) Activator.CreateInstance(type, new object[] { control });
+                                    return (IFormControlCommand) Activator.CreateInstance(type, new object[] { control });
                                 }
                             }
                         }
@@ -77,20 +77,20 @@ namespace Command
         /// <param name="control"></param>
         /// <param name="pt1"></param>
         /// <param name="pt2"></param>
-        public void AddControl(IDocumentControl control)
+        public void AddControl(IFormControl control)
         {
             // 해당 컨트롤에 알맞는 커맨드를 생성하여 추가한다.
-            IDocumentControlCommand command = CreateDocumentControlCommand(control);
-            UnDoDocumentControls.Push(command);
+            IFormControlCommand command = CreateFormControlCommand(control);
+            UnDoFormControls.Push(command);
             command.Execute();
         }
 
         public void Undo()
         {
-            if (UnDoDocumentControls.Count > 0)
+            if (UnDoFormControls.Count > 0)
             {
-                IDocumentControlCommand command = UnDoDocumentControls.Pop();
-                ReDoDocumentControls.Push(command);
+                IFormControlCommand command = UnDoFormControls.Pop();
+                ReDoFormControls.Push(command);
 
                 Console.WriteLine("Undo........ Press any key");
                 Console.ReadKey();
@@ -100,10 +100,10 @@ namespace Command
 
         public void Redo()
         {
-            if (ReDoDocumentControls.Count > 0)
+            if (ReDoFormControls.Count > 0)
             {
-                IDocumentControlCommand command = ReDoDocumentControls.Pop();
-                UnDoDocumentControls.Push(command);
+                IFormControlCommand command = ReDoFormControls.Pop();
+                UnDoFormControls.Push(command);
 
                 Console.WriteLine("Redo........ Press any key");
                 Console.ReadKey();

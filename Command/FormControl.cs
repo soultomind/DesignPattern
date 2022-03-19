@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    public abstract class DocumentControl : IDocumentControl
+    public abstract class FormControl : IFormControl
     {
         public string Name
         {
@@ -32,7 +32,7 @@ namespace Command
             }
         }
 
-        public DocumentControl(string name, Point pt1, Point pt2)
+        public FormControl(string name, Point pt1, Point pt2)
         {
             Name = name;
             Pt1 = pt1;
@@ -64,7 +64,7 @@ namespace Command
         {
             Click?.Invoke(this, EventArgs.Empty);
         }
-        public event DocumentControlEventHandler Click;
+        public event FormControlEventHandler Click;
 
 
         public override string ToString()

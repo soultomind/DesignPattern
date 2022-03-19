@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class DocumentManager
+    public interface IFormControlCommand
     {
+
+        void Execute();
+        void Draw();
     }
 }

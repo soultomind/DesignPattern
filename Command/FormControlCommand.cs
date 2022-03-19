@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    public abstract class DocumentControlCommand : IDocumentControlCommand
+    public abstract class FormControlCommand : IFormControlCommand
     {
-        public DocumentControl Control { get; set; }
-        public DocumentControlCommand(DocumentControl control)
+        public FormControl Control { get; set; }
+        public FormControlCommand(FormControl control)
         {
             Control = control;
         }
