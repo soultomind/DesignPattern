@@ -12,6 +12,7 @@ namespace TemplateMethod
         {
             get
             {
+                //return this is IDeviceCheckManager;
                 return false;
             }
         }
