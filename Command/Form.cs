@@ -34,16 +34,6 @@ namespace Command
             Size = size;
         }
 
-        public void Redraw()
-        {
-            Console.WriteLine("현재 폼을 다시 그립니다.");
-            Console.WriteLine("모든 컨트롤을 다시 그립니다.");
-            foreach (IFormControlCommand command in UnDoFormControls)
-            {
-                command.Draw();
-            }
-        }
-
         private IFormControlCommand CreateFormControlCommand(IFormControl control)
         {
             Assembly assembly = Assembly.GetEntryAssembly();
@@ -69,6 +59,16 @@ namespace Command
             }
 
             return null;
+        }
+
+        public void Redraw()
+        {
+            Console.WriteLine("현재 폼을 다시 그립니다.");
+            Console.WriteLine("모든 컨트롤을 다시 그립니다.");
+            foreach (IFormControlCommand command in UnDoFormControls)
+            {
+                command.Draw();
+            }
         }
 
         /// <summary>

@@ -18,14 +18,14 @@ namespace Command
 
             Console.WriteLine("현재 문서에");
             FormButton buton = new FormButton(
-                "버튼1", new Point(10, 10), new Point(60, 30))
+                "버튼1", new Point(100, 100), new Point(600, 300))
             {
                 Text = "클릭"
             };
             form.AddControl(buton);
 
             FormTextBox textBox = new FormTextBox(
-                "텍스트1", new Point(10, 10), new Point(60, 30))
+                "텍스트1", new Point(500, 100), new Point(100, 800))
             {
                 Text = ""
             };
