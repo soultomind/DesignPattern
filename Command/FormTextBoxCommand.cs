@@ -22,7 +22,7 @@ namespace Command
 
         public override void Draw()
         {
-            Console.WriteLine("텍스트박스를 그립니다.=" + Control.ToString());
+            Console.WriteLine("텍스트박스를 그립니다. " + Control.ToString());
         }
     }
 }

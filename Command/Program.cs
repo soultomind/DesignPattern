@@ -16,7 +16,7 @@ namespace Command
             Designer designer = new Designer();
             Form form = designer.NewForm();
 
-            Console.WriteLine("현재 문서에");
+            Console.WriteLine("현재 " + form.Name + " 문서에");
             FormButton buton = new FormButton(
                 "버튼1", new Point(100, 100), new Point(600, 300))
             {

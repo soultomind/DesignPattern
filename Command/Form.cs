@@ -63,7 +63,7 @@ namespace Command
 
         public void Redraw()
         {
-            Console.WriteLine("현재 폼을 다시 그립니다.");
+            Console.WriteLine("현재 " + Name + " 문서를 다시 그립니다.");
             Console.WriteLine("모든 컨트롤을 다시 그립니다.");
             foreach (IFormControlCommand command in UnDoFormControls)
             {
@@ -75,8 +75,6 @@ namespace Command
         /// 디자이너에서 특정 컨트롤(버튼, 텍스트박스 .. 등) 마우스를 통하여 그린 컨트롤
         /// </summary>
         /// <param name="control"></param>
-        /// <param name="pt1"></param>
-        /// <param name="pt2"></param>
         public void AddControl(IFormControl control)
         {
             // 해당 컨트롤에 알맞는 커맨드를 생성하여 추가한다.
